@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import MapKit
 
 struct SchoolData {
 	var name = ""
 	var country = ""
-	var lat : Double = 0
-	var lon : Double = 0
+	var lat : CLLocationDegrees = 0
+	var lon : CLLocationDegrees = 0
 }
 
 class SchoolCollection {

@@ -10,9 +10,9 @@ import UIKit
 import MapKit
 
 class Uf: NSObject, MKAnnotation {
-    let title: String?
-    let locationName: String
-    let coordinate: CLLocationCoordinate2D
+	var title: String?
+    var locationName: String
+    var coordinate: CLLocationCoordinate2D
 
     init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
@@ -44,21 +44,17 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
-    let uf = Uf(title: "UNIT Factory",
+    var uf = Uf(title: "UNIT Factory",
                 locationName: "Educational institution",
                 coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
-	
-	let lat: CLLocationDegrees = 50.468879
-	let lon: CLLocationDegrees = 30.462173
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         if chosenSchool.name.count != 0 {
-            let lat: CLLocationDegrees = chosenSchool.lat
-            let lon: CLLocationDegrees = chosenSchool.lon
-            print("===================", chosenSchool.name)
+			uf.title = chosenSchool.name
+			uf.coordinate = CLLocationCoordinate2D(latitude: chosenSchool.lat, longitude: chosenSchool.lon)
         }
-		let initialLocation = CLLocation(latitude: lat, longitude: lon)
+		let initialLocation = CLLocation(latitude: uf.coordinate.latitude, longitude: uf.coordinate.longitude)
         mapView.delegate = self
 		mapView.addAnnotation(uf)
 		centerMapOnLocation(location: initialLocation)

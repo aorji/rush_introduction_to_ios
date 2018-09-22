@@ -50,6 +50,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		chosenSchool = school.list[indexPath.row]
+		performSegue(withIdentifier: "goToMapWithSelectedSchool", sender: self)
     }
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -73,11 +74,11 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
 	}
 	
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToMapWithSelectedCity" {
+        if segue.identifier == "goToMapWithSelectedSchool" {
             guard let destinationVC = segue.destination as? FirstViewController else {
                 return
             }
-            destinationVC.chosenCity = chosenSchool
+            destinationVC.chosenSchool = self.chosenSchool
         }
     }
 

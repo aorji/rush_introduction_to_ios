@@ -29,7 +29,7 @@ class Uf: NSObject, MKAnnotation {
 
 class FirstViewController: UIViewController {
 
-	var chosenCity = SchoolData()
+	var chosenSchool = SchoolData()
 	
     @IBAction func segCtrlAction(_ sender: Any) {
         switch ((sender as AnyObject).selectedSegmentIndex) {
@@ -43,11 +43,11 @@ class FirstViewController: UIViewController {
     }
 
     @IBOutlet weak var mapView: MKMapView!
-    
+
     let uf = Uf(title: "UNIT Factory",
                 locationName: "Educational institution",
                 coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 		let initialLocation = CLLocation(latitude: 50.469713, longitude: 30.462223)
@@ -59,7 +59,7 @@ class FirstViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-	
+
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)

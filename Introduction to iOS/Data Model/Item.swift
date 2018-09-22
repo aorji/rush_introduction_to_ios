@@ -9,8 +9,8 @@
 import Foundation
 
 struct SchoolData {
-	var name = String()
-	var country = String()
+	var name = ""
+	var country = ""
 	var lat : Double = 0
 	var lon : Double = 0
 }

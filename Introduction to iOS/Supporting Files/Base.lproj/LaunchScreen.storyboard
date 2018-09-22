@@ -19,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_9000" translatesAutoresizingMaskIntoConstraints="NO" id="HQl-qU-mlT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-zi-26W">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best App Ever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYQ-7Z-Hpz">
-                                <rect key="frame" x="119.66666666666669" y="133.66666666666666" width="175" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Map Ever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYQ-7Z-Hpz">
+                                <rect key="frame" x="117.99999999999999" y="133.66666666666666" width="178.66666666666663" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -31,26 +31,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="HQl-qU-mlT" secondAttribute="trailing" id="54G-Cq-11n"/>
-                            <constraint firstItem="HQl-qU-mlT" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8NG-oS-7Kg"/>
-                            <constraint firstAttribute="bottom" secondItem="HQl-qU-mlT" secondAttribute="bottom" id="Djz-Nf-gWs"/>
-                            <constraint firstItem="HQl-qU-mlT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FxF-xL-RAM"/>
+                            <constraint firstItem="c1U-zi-26W" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DaZ-YY-Bs2"/>
+                            <constraint firstAttribute="trailing" secondItem="c1U-zi-26W" secondAttribute="trailing" id="EbA-vT-H9X"/>
                             <constraint firstItem="yYQ-7Z-Hpz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TWi-zH-Spi"/>
-                            <constraint firstAttribute="bottom" secondItem="HQl-qU-mlT" secondAttribute="bottom" id="b5j-p1-4Cp"/>
-                            <constraint firstAttribute="trailing" secondItem="HQl-qU-mlT" secondAttribute="trailing" id="cuc-YA-dyY"/>
-                            <constraint firstItem="HQl-qU-mlT" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gzq-37-nxW"/>
+                            <constraint firstItem="c1U-zi-26W" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="YCW-m5-PWP"/>
                             <constraint firstItem="yYQ-7Z-Hpz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="2:5" id="muR-Kv-m2f"/>
-                            <constraint firstItem="HQl-qU-mlT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="yEF-gh-60R"/>
+                            <constraint firstItem="c1U-zi-26W" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uW6-tS-UB1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_9000" width="5042" height="3361"/>
+        <image name="launchScreen" width="5304" height="7952"/>
     </resources>
 </document>

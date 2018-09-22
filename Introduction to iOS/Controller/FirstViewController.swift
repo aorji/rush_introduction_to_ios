@@ -13,7 +13,9 @@ class FirstViewController: UIViewController {
 
 	var chosenSchool = SchoolData()
 	
-    @IBAction func segCtrlAction(_ sender: Any) {
+	@IBOutlet weak var navigationBar: UINavigationItem!
+	
+	@IBAction func segCtrlAction(_ sender: Any) {
         switch ((sender as AnyObject).selectedSegmentIndex) {
         case 0:
             mapView.mapType = .standard
@@ -37,7 +39,8 @@ class FirstViewController: UIViewController {
 			uf.coordinate = CLLocationCoordinate2D(latitude: chosenSchool.lat, longitude: chosenSchool.lon)
         }
 		let initialLocation = CLLocation(latitude: uf.coordinate.latitude, longitude: uf.coordinate.longitude)
-        mapView.delegate = self
+		navigationBar.title = uf.title
+		mapView.delegate = self
 		mapView.addAnnotation(uf)
 		centerMapOnLocation(location: initialLocation)
     }

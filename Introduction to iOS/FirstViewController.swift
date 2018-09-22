@@ -44,14 +44,14 @@ class FirstViewController: UIViewController {
     
     let uf = Uf(title: "UNIT Factory",
                 locationName: "Educational institution",
-                coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
+                coordinate: CLLocationCoordinate2D(latitude: 50.468879, longitude: 30.462173))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		let initialLocation = CLLocation(latitude: 50.469713, longitude: 30.462223)
+		let initialLocation = CLLocation(latitude: 50.468879, longitude: 30.462173)
         mapView.delegate = self
+		mapView.addAnnotation(uf)
 		centerMapOnLocation(location: initialLocation)
-        mapView.addAnnotation(uf)
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,4 +84,3 @@ extension FirstViewController: MKMapViewDelegate {
         return view
     }
 }
-

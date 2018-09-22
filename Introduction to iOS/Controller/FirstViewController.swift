@@ -29,6 +29,8 @@ class Uf: NSObject, MKAnnotation {
 
 class FirstViewController: UIViewController {
 
+	var chosenCity = SchoolData()
+	
     @IBAction func segCtrlAction(_ sender: Any) {
         switch ((sender as AnyObject).selectedSegmentIndex) {
         case 0:
@@ -63,7 +65,6 @@ class FirstViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-
 }
 
 extension FirstViewController: MKMapViewDelegate {

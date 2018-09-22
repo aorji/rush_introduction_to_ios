@@ -18,6 +18,7 @@
 		73364EF768307C3292AACA8F /* Pods_Introduction_to_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1F3F048C408A8905D355F /* Pods_Introduction_to_iOSTests.framework */; };
 		8108DBA121565A650014D343 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8108DBA021565A650014D343 /* TableViewController.swift */; };
 		8108DBA3215664890014D343 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8108DBA2215664890014D343 /* Item.swift */; };
+		818579E72156B6BB00CF105D /* SchoolLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818579E62156B6BB00CF105D /* SchoolLocation.swift */; };
 		B5B5E3D806A734E91D000C91 /* Pods_Introduction_to_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3257AB4E8E562EA272128A83 /* Pods_Introduction_to_iOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		7760310BD21C2E2E884A0083 /* Pods-Introduction to iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Introduction to iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Introduction to iOSTests/Pods-Introduction to iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8108DBA021565A650014D343 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8108DBA2215664890014D343 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		818579E62156B6BB00CF105D /* SchoolLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SchoolLocation.swift; path = "Introduction to iOS/Data Model/SchoolLocation.swift"; sourceTree = SOURCE_ROOT; };
 		8640E0780587B0881EB0997B /* Pods-Introduction to iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Introduction to iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Introduction to iOS/Pods-Introduction to iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CFEA21F93458BC1C7204AEDF /* Pods-Introduction to iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Introduction to iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Introduction to iOS/Pods-Introduction to iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 			children = (
 				2C3204442156285800010464 /* FirstViewController.swift */,
 				8108DBA021565A650014D343 /* TableViewController.swift */,
+				818579E62156B6BB00CF105D /* SchoolLocation.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818579E72156B6BB00CF105D /* SchoolLocation.swift in Sources */,
 				8108DBA3215664890014D343 /* Item.swift in Sources */,
 				2C3204432156285800010464 /* AppDelegate.swift in Sources */,
 				2C3204452156285800010464 /* FirstViewController.swift in Sources */,

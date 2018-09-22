@@ -9,24 +9,6 @@
 import UIKit
 import MapKit
 
-class Uf: NSObject, MKAnnotation {
-	var title: String?
-    var locationName: String
-    var coordinate: CLLocationCoordinate2D
-
-    init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
-        self.title = title
-        self.locationName = locationName
-        self.coordinate = coordinate
-
-        super.init()
-    }
-
-    var subtitle: String? {
-        return locationName
-    }
-}
-
 class FirstViewController: UIViewController {
 
 	var chosenSchool = SchoolData()
@@ -44,7 +26,7 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
-    var uf = Uf(title: "UNIT Factory",
+    var uf = SchoolLocation(title: "UNIT Factory",
                 locationName: "Educational institution",
                 coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
 	
@@ -73,7 +55,7 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? Uf else { return nil }
+        guard let annotation = annotation as? SchoolLocation else { return nil }
         let identifier = "marker"
         var view: MKMarkerAnnotationView
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)

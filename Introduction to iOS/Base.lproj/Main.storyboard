@@ -19,15 +19,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nWD-Wg-k4w">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="570"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PL6-dJ-sUH" userLabel="Standart, Sattelite">
+                                <rect key="frame" x="136" y="578" width="223" height="29"/>
+                                <segments>
+                                    <segment title="Standart"/>
+                                    <segment title="Sattelite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segCtrlAction:" destination="9pv-A4-QxB" eventType="valueChanged" id="m70-6Q-deX"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="4wG-JB-Jb1"/>
-                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="7kz-bd-S3u"/>
-                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="Edl-O5-lo4"/>
-                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="hZT-mZ-2PR"/>
+                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="0W1-U4-fqv"/>
+                            <constraint firstItem="PL6-dJ-sUH" firstAttribute="top" secondItem="nWD-Wg-k4w" secondAttribute="bottom" constant="8" id="5nj-pN-ppr"/>
+                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="7Zx-Lk-xqR"/>
+                            <constraint firstItem="PL6-dJ-sUH" firstAttribute="top" secondItem="nWD-Wg-k4w" secondAttribute="bottom" constant="8" id="Ev2-Ob-QJd"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="PL6-dJ-sUH" secondAttribute="trailing" constant="16" id="Hfn-iK-WFb"/>
+                            <constraint firstItem="nWD-Wg-k4w" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="KOH-fE-zIh"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="PL6-dJ-sUH" secondAttribute="bottom" constant="12" id="PWQ-lL-1Jf"/>
+                            <constraint firstItem="PL6-dJ-sUH" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="136" id="sdR-1P-g4t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>

@@ -28,20 +28,20 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
-    var uf = SchoolLocation(title: "UNIT Factory",
+    var schoolName = SchoolLocation(title: "UNIT Factory",
                 locationName: "Educational institution",
                 coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         if chosenSchool.name.count != 0 {
-			uf.title = chosenSchool.name
-			uf.coordinate = CLLocationCoordinate2D(latitude: chosenSchool.lat, longitude: chosenSchool.lon)
+			schoolName.title = chosenSchool.name
+			schoolName.coordinate = CLLocationCoordinate2D(latitude: chosenSchool.lat, longitude: chosenSchool.lon)
         }
-		let initialLocation = CLLocation(latitude: uf.coordinate.latitude, longitude: uf.coordinate.longitude)
-		navigationBar.title = uf.title
+		let initialLocation = CLLocation(latitude: schoolName.coordinate.latitude, longitude: schoolName.coordinate.longitude)
+		navigationBar.title = schoolName.title
 		mapView.delegate = self
-		mapView.addAnnotation(uf)
+		mapView.addAnnotation(schoolName)
 		centerMapOnLocation(location: initialLocation)
     }
 

@@ -46,10 +46,17 @@ class FirstViewController: UIViewController {
     let uf = Uf(title: "UNIT Factory",
                 locationName: "Educational institution",
                 coordinate: CLLocationCoordinate2D(latitude: 50.468879, longitude: 30.462173))
-    
+	let lat: CLLocationDegrees = 50.468879
+	let lon: CLLocationDegrees = 30.462173
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-		let initialLocation = CLLocation(latitude: 50.468879, longitude: 30.462173)
+//        if let name = chosenCity.name {
+//            let lat: CLLocationDegrees = chosenCity.lat
+//            let lon: CLLocationDegrees = chosenCity.lon
+            print("===================", chosenCity.name)
+//        }
+		let initialLocation = CLLocation(latitude: lat, longitude: lon)
         mapView.delegate = self
 		mapView.addAnnotation(uf)
 		centerMapOnLocation(location: initialLocation)

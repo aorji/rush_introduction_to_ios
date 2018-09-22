@@ -31,6 +31,7 @@ class FirstViewController: UIViewController {
 
 	var chosenCity = SchoolData()
 	
+    @IBOutlet weak var mapView: MKMapView!
     @IBAction func segCtrlAction(_ sender: Any) {
         switch ((sender as AnyObject).selectedSegmentIndex) {
         case 0:
@@ -41,8 +42,6 @@ class FirstViewController: UIViewController {
             mapView.mapType = .hybrid
         }
     }
-
-    @IBOutlet weak var mapView: MKMapView!
     
     let uf = Uf(title: "UNIT Factory",
                 locationName: "Educational institution",

@@ -20,13 +20,11 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
 	var isSearching = false
 	
     override func viewDidLoad() {
-		
         super.viewDidLoad()
 		self.tableView.reloadData()
     }
 
-    // MARK: - Table view data source
-
+	//MARK: - table view
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if isSearching {
 			return filteredSchool.count
@@ -53,6 +51,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
 		performSegue(withIdentifier: "goToMapWithSelectedSchool", sender: self)
     }
 	
+	//MARK: - search bar
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		
 		if searchBar.text == nil || searchBar.text == "" {
@@ -73,6 +72,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
 		}
 	}
 	
+	//MARK: - go to map with chosen school
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToMapWithSelectedSchool" {
             guard let destinationVC = segue.destination as? FirstViewController else {

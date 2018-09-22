@@ -40,7 +40,6 @@
                             <constraint firstItem="gEj-aa-5cn" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="YzL-6G-5hw"/>
                             <constraint firstItem="yjw-N7-EhH" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="154" id="ZWk-mh-bPy"/>
                             <constraint firstItem="gEj-aa-5cn" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Zy8-1m-ex2"/>
-                            <constraint firstItem="yjw-N7-EhH" firstAttribute="top" secondItem="gEj-aa-5cn" secondAttribute="bottom" constant="8" id="kLJ-Jx-azx"/>
                             <constraint firstItem="gEj-aa-5cn" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="xlS-3B-EMM"/>
                             <constraint firstItem="yjw-N7-EhH" firstAttribute="top" secondItem="gEj-aa-5cn" secondAttribute="bottom" constant="10" id="zeE-9R-SHH"/>
                         </constraints>
@@ -156,7 +155,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T2U-Gf-8RV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.20610597729682922" green="0.47088390588760376" blue="0.96475857496261597" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>

@@ -53,11 +53,11 @@ class FirstViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let name = chosenCity.name {
-//            let lat: CLLocationDegrees = chosenCity.lat
-//            let lon: CLLocationDegrees = chosenCity.lon
-//            print("===================", chosenCity.name)
-//        }
+        if chosenSchool.name.count != 0 {
+            let lat: CLLocationDegrees = chosenSchool.lat
+            let lon: CLLocationDegrees = chosenSchool.lon
+            print("===================", chosenSchool.name)
+        }
 		let initialLocation = CLLocation(latitude: lat, longitude: lon)
         mapView.delegate = self
 		mapView.addAnnotation(uf)

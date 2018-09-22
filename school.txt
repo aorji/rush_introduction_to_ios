@@ -1,0 +1,38 @@
+1. WeThinkCode 
+South Africa
+-26.204707
+28.040148
+2.ACADEMY+PLUS
+Romania
+46.786002
+23.606803
+3.ACADEMY+MOLDOVA
+Moldova
+47.040103
+28.824686
+4.UNIT Factory
+Kyiv
+50.469041
+30.462159
+5.The 101
+Lyon, France
+45.739467
+4.817606
+6. 19
+Brussels, Belgium
+50.778293
+4.351059
+7.CODAM
+Amsterdam, The Netherlands
+52.372575
+4.915375
+8.1337
+Khouribga, Morocco
+École 1337
+Khouribga, Марокко
+32.882379
+-6.897713
+9. 21
+Moscow, Russia
+55.797254
+37.579699

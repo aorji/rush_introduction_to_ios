@@ -162,6 +162,7 @@
 		8108DBA4215664930014D343 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				818579E62156B6BB00CF105D /* SchoolLocation.swift */,
 				8108DBA2215664890014D343 /* Item.swift */,
 			);
 			path = "Data Model";
@@ -172,7 +173,6 @@
 			children = (
 				2C3204442156285800010464 /* FirstViewController.swift */,
 				8108DBA021565A650014D343 /* TableViewController.swift */,
-				818579E62156B6BB00CF105D /* SchoolLocation.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

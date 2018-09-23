@@ -87,20 +87,16 @@ extension FirstViewController: CLLocationManagerDelegate{
 	
 	func configureLocationServices() {
 		locationManager.delegate = self
-		print("configure location services")
 		let status = CLLocationManager.authorizationStatus()
 		
 		if status == .notDetermined {
-			print("status not determined")
 			locationManager.requestAlwaysAuthorization()
 		} else if status == .authorizedAlways || status == .authorizedWhenInUse {
-			print("status allowed")
 			beginLocationUpdates(locationManager: locationManager)
 		}
 	}
 	
 	func beginLocationUpdates(locationManager: CLLocationManager) {
-		print("begin location updates")
 		geolocationMode = 1
 		mapView.showsUserLocation = true
 		locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -113,13 +109,12 @@ extension FirstViewController: CLLocationManagerDelegate{
 	}
 	
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("location manager (updated location)")
-        guard let latestLocation = locations.first else { return }
+		guard let latestLocation = locations.first else { return }
+		locationManager.stopUpdatingLocation()
         zoomToLatestLocation(with: latestLocation.coordinate)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("status changed")
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             beginLocationUpdates(locationManager: locationManager)
         }

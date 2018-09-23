@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904.8" y="-391.75412293853077"/>
+            <point key="canvasLocation" x="2135" y="-779"/>
         </scene>
         <!--More-->
         <scene sceneID="WWE-ov-X8I">
@@ -100,14 +100,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcv-3O-hHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3517.5999999999999" y="259.52023988005999"/>
+            <point key="canvasLocation" x="3366" y="0.0"/>
         </scene>
         <!--Find school-->
         <scene sceneID="Nlq-pf-NRv">
             <objects>
-                <tableViewController id="zqU-fL-Dka" customClass="TableViewController" customModule="Introduction_to_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XeE-Yo-kV0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="zqU-fL-Dka" customClass="TableViewController" customModule="Introduction_to_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XeE-Yo-kV0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter school name here" id="3OD-j4-jTC">
@@ -155,6 +155,7 @@
                             <outlet property="delegate" destination="zqU-fL-Dka" id="ysU-R1-Ntp"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Find school" id="YbR-bd-4Ml"/>
                     <connections>
                         <outlet property="searchBar" destination="3OD-j4-jTC" id="doJ-UT-m3n"/>
@@ -163,7 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf8-KS-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375.2" y="518.59070464767615"/>
+            <point key="canvasLocation" x="1375" y="807"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -191,6 +192,7 @@
         <scene sceneID="ZmW-qp-Qwn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pou-1Z-jj1" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="List" image="icons8-playlist-50" id="3AA-4U-nmk">
                         <color key="badgeColor" red="0.65130263570000002" green="0.69409191609999998" blue="0.69803619380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
@@ -214,7 +216,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqP-Fk-WBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="722"/>
+            <point key="canvasLocation" x="601" y="806"/>
         </scene>
         <!--Map-->
         <scene sceneID="a0a-IZ-mmr">
@@ -241,7 +243,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIY-eV-7hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-392"/>
+            <point key="canvasLocation" x="966" y="-779"/>
         </scene>
         <!--More-->
         <scene sceneID="1Y8-wz-iDW">
@@ -269,7 +271,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enX-ru-bIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="260"/>
+            <point key="canvasLocation" x="2593" y="0.0"/>
         </scene>
     </scenes>
     <resources>

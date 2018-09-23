@@ -102,69 +102,71 @@
             </objects>
             <point key="canvasLocation" x="3366" y="0.0"/>
         </scene>
-        <!--Find school-->
-        <scene sceneID="Nlq-pf-NRv">
+        <!--List View Controller-->
+        <scene sceneID="SIR-oj-Ob4">
             <objects>
-                <tableViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="zqU-fL-Dka" customClass="TableViewController" customModule="Introduction_to_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XeE-Yo-kV0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                <viewController id="IAE-Dv-0xl" customClass="ListViewController" customModule="Introduction_to_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ubK-9K-okf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Tipe school name here" translatesAutoresizingMaskIntoConstraints="NO" id="QZg-66-QKt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-Z0-vaN">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="V9u-FR-BIe" detailTextLabel="085-Og-PMq" style="IBUITableViewCellStyleSubtitle" id="by1-i4-X87">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="by1-i4-X87" id="vGM-DM-PFD">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V9u-FR-BIe">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="085-Og-PMq">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter school name here" id="3OD-j4-jTC">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="barTintColor" red="0.65130263570000002" green="0.69409191609999998" blue="0.69803619380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>Title</string>
-                                <string>Title</string>
-                            </scopeButtonTitles>
-                            <connections>
-                                <outlet property="delegate" destination="zqU-fL-Dka" id="N0b-r5-H5w"/>
-                            </connections>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CityListCell" textLabel="3HX-Vf-hl0" detailTextLabel="aTg-Pg-s3i" style="IBUITableViewCellStyleSubtitle" id="A4D-Dv-jAd">
-                                <rect key="frame" x="0.0" y="84" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A4D-Dv-jAd" id="R3I-7T-yez">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3HX-Vf-hl0">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aTg-Pg-s3i">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="zqU-fL-Dka" id="FX7-9j-k05"/>
-                            <outlet property="delegate" destination="zqU-fL-Dka" id="ysU-R1-Ntp"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Find school" id="YbR-bd-4Ml"/>
+                        <constraints>
+                            <constraint firstItem="QZg-66-QKt" firstAttribute="leading" secondItem="ubK-9K-okf" secondAttribute="leading" id="0DK-ZU-KS5"/>
+                            <constraint firstItem="xiA-Z0-vaN" firstAttribute="top" secondItem="QZg-66-QKt" secondAttribute="bottom" id="1B8-NQ-IyF"/>
+                            <constraint firstItem="QZg-66-QKt" firstAttribute="top" secondItem="ubK-9K-okf" secondAttribute="top" constant="64" id="DEd-6t-nNW"/>
+                            <constraint firstItem="xiA-Z0-vaN" firstAttribute="bottom" secondItem="toy-eu-ANs" secondAttribute="bottom" id="Xin-iQ-2y8"/>
+                            <constraint firstAttribute="trailing" secondItem="QZg-66-QKt" secondAttribute="trailing" id="mhz-hS-OMy"/>
+                            <constraint firstAttribute="trailing" secondItem="xiA-Z0-vaN" secondAttribute="trailing" id="osZ-X8-ChG"/>
+                            <constraint firstItem="xiA-Z0-vaN" firstAttribute="leading" secondItem="ubK-9K-okf" secondAttribute="leading" id="qQ3-w9-wXO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="toy-eu-ANs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gTQ-Qv-0GC"/>
                     <connections>
-                        <outlet property="searchBar" destination="3OD-j4-jTC" id="doJ-UT-m3n"/>
-                        <segue destination="9pv-A4-QxB" kind="show" identifier="goToMapWithSelectedSchool" id="W5n-3o-cBk"/>
+                        <outlet property="searchBar" destination="QZg-66-QKt" id="tQK-Tg-10D"/>
+                        <outlet property="tableView" destination="xiA-Z0-vaN" id="OeD-q4-fI2"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="goToMapWithSelectedSchool" id="nrm-xf-GZI"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jf8-KS-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qym-Xq-OlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="807"/>
+            <point key="canvasLocation" x="1590" y="806"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -211,7 +213,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zqU-fL-Dka" kind="relationship" relationship="rootViewController" id="FPE-WQ-jwS"/>
+                        <segue destination="IAE-Dv-0xl" kind="relationship" relationship="rootViewController" id="vbf-xt-wHh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqP-Fk-WBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,6 +284,6 @@
         <image name="rhino_PNG18" width="1271" height="1058"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W5n-3o-cBk"/>
+        <segue reference="nrm-xf-GZI"/>
     </inferredMetricsTieBreakers>
 </document>

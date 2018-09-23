@@ -30,7 +30,7 @@ class FirstViewController: UIViewController {
 
     var schoolName = SchoolLocation(title: "UNIT Factory",
                 locationName: "Educational institution",
-                coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
+                coordinate: CLLocationCoordinate2D(latitude: 50.469061, longitude: 30.462116))
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,39 +38,33 @@ class FirstViewController: UIViewController {
 			schoolName.title = chosenSchool.name
 			schoolName.coordinate = CLLocationCoordinate2D(latitude: chosenSchool.lat, longitude: chosenSchool.lon)
         }
-		let initialLocation = CLLocation(latitude: schoolName.coordinate.latitude, longitude: schoolName.coordinate.longitude)
+		let span = MKCoordinateSpanMake(0.005, 0.005)
+		let region = MKCoordinateRegionMake(schoolName.coordinate, span)
+		mapView.setRegion(region, animated: true)
+		
+		let annotation =  MKPointAnnotation()
+		annotation.coordinate = schoolName.coordinate
+		annotation.title = schoolName.title
+		annotation.subtitle = schoolName.locationName
+		mapView.addAnnotation(annotation)
+		
 		navigationBar.title = schoolName.title
 		mapView.delegate = self
-		mapView.addAnnotation(schoolName)
-		centerMapOnLocation(location: initialLocation)
+		mapView.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    let regionRadius: CLLocationDistance = 1000
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
 }
 
 extension FirstViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? SchoolLocation else { return nil }
-        let identifier = "marker"
-        var view: MKMarkerAnnotationView
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            as? MKMarkerAnnotationView {
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        } else {
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        }
-        return view
-    }
+	
+	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+		let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+		guard (annotation.title) != nil else {return nil}
+		annotationView.pinTintColor = UIColor.black
+		annotationView.canShowCallout = true
+		return annotationView
+	}
 }

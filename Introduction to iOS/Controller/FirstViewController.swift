@@ -31,7 +31,6 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func getCurrentLocation(_ sender: UIButton) {
-		print("button")
         if geolocationMode == 0 {
             configureLocationServices()
         } else {

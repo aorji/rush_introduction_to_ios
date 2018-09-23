@@ -40,8 +40,7 @@ class FirstViewController: UIViewController {
             geolocationMode = 0
         }
     }
-    
-
+	
     var schoolName = SchoolLocation(title: "UNIT Factory",
                 locationName: "Educational institution",
                 coordinate: CLLocationCoordinate2D(latitude: 50.469713, longitude: 30.462223))
@@ -59,13 +58,8 @@ class FirstViewController: UIViewController {
 		centerMapOnLocation(location: initialLocation)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
         mapView.setRegion(coordinateRegion, animated: true)
     }
 }
@@ -87,37 +81,37 @@ extension FirstViewController: MKMapViewDelegate {
         }
         return view
     }
-    
-    func configureLocationServices() {
-        locationManager.delegate = self
-        print("configure location services")
-        let status = CLLocationManager.authorizationStatus()
-        
-        if status == .notDetermined {
-            print("status not determined")
-            locationManager.requestAlwaysAuthorization()
-        } else if status == .authorizedAlways || status == .authorizedWhenInUse {
-            print("status allowed")
-            beginLocationUpdates(locationManager: locationManager)
-        }
-    }
-    
-    func beginLocationUpdates(locationManager: CLLocationManager) {
-        print("begin location updates")
-        geolocationMode = 1
-        mapView.showsUserLocation = true
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-    }
-    
-    func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
-        let zoomRegion = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000)
-        mapView.setRegion(zoomRegion, animated: true)
-    }
 }
 
 extension FirstViewController: CLLocationManagerDelegate{
-   
+	
+	func configureLocationServices() {
+		locationManager.delegate = self
+		print("configure location services")
+		let status = CLLocationManager.authorizationStatus()
+		
+		if status == .notDetermined {
+			print("status not determined")
+			locationManager.requestAlwaysAuthorization()
+		} else if status == .authorizedAlways || status == .authorizedWhenInUse {
+			print("status allowed")
+			beginLocationUpdates(locationManager: locationManager)
+		}
+	}
+	
+	func beginLocationUpdates(locationManager: CLLocationManager) {
+		print("begin location updates")
+		geolocationMode = 1
+		mapView.showsUserLocation = true
+		locationManager.desiredAccuracy = kCLLocationAccuracyBest
+		locationManager.startUpdatingLocation()
+	}
+	
+	func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
+		let zoomRegion = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000)
+		mapView.setRegion(zoomRegion, animated: true)
+	}
+	
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("location manager (updated location)")
         guard let latestLocation = locations.first else { return }

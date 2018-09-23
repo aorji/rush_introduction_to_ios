@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,14 +16,14 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-zi-26W">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-zi-26W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Map Ever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYQ-7Z-Hpz">
-                                <rect key="frame" x="117.99999999999999" y="133.66666666666666" width="178.66666666666663" height="35"/>
+                                <rect key="frame" x="98.333333333333329" y="188" width="178.66666666666669" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -31,19 +31,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="c1U-zi-26W" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DaZ-YY-Bs2"/>
-                            <constraint firstAttribute="trailing" secondItem="c1U-zi-26W" secondAttribute="trailing" id="EbA-vT-H9X"/>
+                            <constraint firstAttribute="trailing" secondItem="c1U-zi-26W" secondAttribute="trailing" id="04D-4Z-Can"/>
                             <constraint firstItem="yYQ-7Z-Hpz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TWi-zH-Spi"/>
-                            <constraint firstItem="c1U-zi-26W" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="YCW-m5-PWP"/>
-                            <constraint firstItem="yYQ-7Z-Hpz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="2:5" id="muR-Kv-m2f"/>
-                            <constraint firstItem="c1U-zi-26W" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uW6-tS-UB1"/>
+                            <constraint firstAttribute="bottom" secondItem="c1U-zi-26W" secondAttribute="bottom" id="bRI-1M-9cd"/>
+                            <constraint firstItem="c1U-zi-26W" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="c4h-27-x6D"/>
+                            <constraint firstItem="yYQ-7Z-Hpz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1:2" id="muR-Kv-m2f"/>
+                            <constraint firstItem="c1U-zi-26W" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="viR-ti-I5I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
+            <point key="canvasLocation" x="50.399999999999999" y="373.89162561576359"/>
         </scene>
     </scenes>
     <resources>

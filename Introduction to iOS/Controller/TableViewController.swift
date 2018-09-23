@@ -9,13 +9,12 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController, UISearchBarDelegate{
+class TableViewController: UITableViewController{
 	
 	@IBOutlet weak var searchBar: UISearchBar!
 		
 	var chosenSchool = SchoolData()
 	let school = SchoolCollection()
-
 	var filteredSchool = [SchoolData]()
 	var isSearching = false
 	
@@ -47,30 +46,13 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if isSearching {
+			chosenSchool = filteredSchool[indexPath.row]
+		} else {
 		chosenSchool = school.list[indexPath.row]
+		}
 		performSegue(withIdentifier: "goToMapWithSelectedSchool", sender: self)
     }
-	
-	//MARK: - search bar
-	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-		
-		if searchBar.text == nil || searchBar.text == "" {
-			
-			isSearching = false
-			
-			view.endEditing(true)
-			
-			tableView.reloadData()
-			
-		} else {
-			
-			isSearching = true
-			
-			filteredSchool = school.list.filter({$0.name.lowercased() == searchBar.text?.lowercased()})
-			
-			tableView.reloadData()
-		}
-	}
 	
 	//MARK: - go to map with chosen school
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,3 +66,11 @@ class TableViewController: UITableViewController, UISearchBarDelegate{
 
 }
 
+//	//MARK: - search bar
+extension TableViewController: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		filteredSchool = school.list.filter({$0.name.lowercased().prefix(searchText.count) == searchText.lowercased()})
+		isSearching = true
+		tableView.reloadData()
+	}
+}

@@ -102,40 +102,6 @@
             </objects>
             <point key="canvasLocation" x="3366" y="0.0"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="RIy-8V-2E1">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="71R-qQ-n1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ira-CX-ZgC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lIH-HY-6eK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hF6-WI-Aoa">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bhx-cY-GfQ">
-                                <rect key="frame" x="55" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Bhx-cY-GfQ" firstAttribute="leading" secondItem="DwI-D4-qdE" secondAttribute="leading" id="7ha-cR-N9K"/>
-                            <constraint firstItem="DwI-D4-qdE" firstAttribute="trailing" secondItem="hF6-WI-Aoa" secondAttribute="trailing" id="Dpg-FD-zWI"/>
-                            <constraint firstItem="Bhx-cY-GfQ" firstAttribute="top" secondItem="hF6-WI-Aoa" secondAttribute="bottom" id="I2T-Qm-5NE"/>
-                            <constraint firstItem="DwI-D4-qdE" firstAttribute="trailing" secondItem="Bhx-cY-GfQ" secondAttribute="trailing" id="I43-jl-UCx"/>
-                            <constraint firstItem="hF6-WI-Aoa" firstAttribute="leading" secondItem="lIH-HY-6eK" secondAttribute="leading" id="fai-TX-GHe"/>
-                            <constraint firstItem="DwI-D4-qdE" firstAttribute="bottom" secondItem="Bhx-cY-GfQ" secondAttribute="bottom" id="qfV-QY-DZR"/>
-                            <constraint firstItem="hF6-WI-Aoa" firstAttribute="top" secondItem="DwI-D4-qdE" secondAttribute="top" id="y5f-xD-cDQ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DwI-D4-qdE"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="4736" y="1167"/>
-        </scene>
         <!--Find school-->
         <scene sceneID="Nlq-pf-NRv">
             <objects>
